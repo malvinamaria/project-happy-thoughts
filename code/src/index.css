@@ -27,18 +27,6 @@ body {
   --palette-color-16: rgb(48, 45, 43);
   --palette-color-17: rgb(245, 244, 242);
   --palette-color-18: rgb(215, 254, 152);
-
-  --palette-font-1: Space Grotesk;
-  --palette-font-2: system-ui;
-  --palette-font-3: Segoe UI;
-  --palette-font-4: Roboto;
-  --palette-font-5: Oxygen;
-  --palette-font-6: Ubuntu;
-  --palette-font-7: Cantarell;
-  --palette-font-8: Fira Sans;
-  --palette-font-9: Droid Sans;
-  --palette-font-10: Helvetica Neue;
-  --palette-font-11: Times;
 }
 
 code {
@@ -48,17 +36,6 @@ code {
 
 /* all the past thoughts */
 .thoughts-input {
-  /* margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border: 1px black solid;
-  padding: 15px;
-  padding-top: 3px;
-  box-shadow: 5px 7px 0px 0px black;
-  width: 350px;
-  text-align: center;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 0.9em; */
   width: 400px;
   margin: auto;
   margin-bottom: 20px;
@@ -67,7 +44,9 @@ code {
   font-size: 16px;
   border: 1px solid;
   font-family: 'Roboto Mono', monospace;
+  background-color: rgb(245, 244, 242);
 }
+
 /* ///////////// place heart btn, count and date on the same line///////// */
 .thoughts-input {
   display: flex;
@@ -88,6 +67,11 @@ code {
 
 .thought-details button {
   margin-right: 8px;
+}
+/* deal with overflow text */
+.thought-text {
+  inline-size: 400px;
+  overflow-wrap: break-word;
 }
 /* ///////////// /////////////////////////////////////////////// */
 

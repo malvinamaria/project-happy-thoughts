@@ -1,3 +1,6 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable react/button-has-type */
 import React from 'react';
 import { formatDistance } from 'date-fns';
@@ -13,7 +16,6 @@ export const ThoughtsList = ({ thoughts, onLikesIncrease }) => {
   return (
     <section>
       {thoughts.map((thoughtsArray) => (
-        // eslint-disable-next-line no-underscore-dangle
         <div className="thoughts-input" key={thoughtsArray._id}>
           <p className="thought-text">{thoughtsArray.message}</p>
           <div className="thought-details">
@@ -22,9 +24,7 @@ export const ThoughtsList = ({ thoughts, onLikesIncrease }) => {
                 className={
                   thoughtsArray.hearts === 0 ? 'like-button' : 'unliked-button'
                 }
-                // eslint-disable-next-line no-underscore-dangle
                 onClick={() => onLikesIncrease(thoughtsArray._id)}
-                // eslint-disable-next-line react/jsx-closing-bracket-location
               >
                 🖤
               </button>
@@ -32,7 +32,6 @@ export const ThoughtsList = ({ thoughts, onLikesIncrease }) => {
             </div>
             <p className="date">
               {formatDistance(new Date(thoughtsArray.createdAt), Date.now(), {
-                // eslint-disable-next-line comma-dangle
                 addSuffix: true,
               })}
             </p>

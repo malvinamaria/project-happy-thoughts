@@ -17,7 +17,7 @@ export const App = () => {
   // when API is delayed setLoading will show message
   const fetchThoughts = () => {
     setLoading(true);
-    fetch('https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts')
+    fetch('https://project-happy-thoughts-api-4yp4ksq4oa-lm.a.run.app/thoughts')
       .then((response) => response.json())
       .then((data) => setThoughts(data))
       .catch((error) => console.log(error))
@@ -47,7 +47,10 @@ export const App = () => {
     };
 
     // here we update fetchFoughts
-    fetch('https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts', options)
+    fetch(
+      'https://project-happy-thoughts-api-4yp4ksq4oa-lm.a.run.app/thoughts',
+      options
+    )
       .then((response) => response.json())
       .then(() => fetchThoughts())
       .finally(() => setNewThought(''));
@@ -62,7 +65,7 @@ export const App = () => {
     };
 
     fetch(
-      `https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts/${LikeID}/like`,
+      `https://project-happy-thoughts-api-4yp4ksq4oa-lm.a.run.app/thoughts/${LikeID}/like`,
       options
     )
       .then((response) => response.json())
@@ -83,7 +86,7 @@ export const App = () => {
         onFormSubmit={onFormSubmit}
       />
       <ThoughtsList
-        loading={loading}
+        // loading={loading}
         thoughts={thoughts}
         onLikesIncrease={onLikesIncrease}
       />
